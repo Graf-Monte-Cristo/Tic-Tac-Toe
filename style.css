@@ -1,0 +1,134 @@
+@import "node_modules/modern-normalize/modern-normalize.css";
+@import "fonts/quicksand/stylesheet.css";
+@import "fonts/Aller/stylesheet.css";
+@import "fonts/Florante-at-Laura/stylesheet.css";
+@import "fonts/arima/stylesheet.css";
+
+:root {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header{
+    background-color: grey;
+    display: grid;
+    grid-template-areas: "h1 h1"
+    "plater1 plaer2";
+    justify-content: space-evenly;
+    padding: 1.5rem;
+}
+header div{
+    font-size: x-large;
+    font-family: allerbold_italic;
+}
+h1{
+    font-size: xx-large;
+    font-family: "quicksandbold_italic";
+    grid-area: h1;
+    text-align: center;
+}
+h2{
+    background-color: grey;
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "arima_koshisemi_bold";
+    font-size: x-large;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 5vh;
+}
+.container{
+    display: grid;
+    width: clamp(260px, 90%, 600px);
+    aspect-ratio: 1 / 1;
+    background-color: rgb(16, 24, 128);
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+}
+
+.block{
+    background-color: rgb(143, 141, 49);
+    aspect-ratio: 1 / 1;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "florante_at_lauraitalic";
+    font-size: xx-large;
+}
+.block:hover{
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    background-color: bisque;
+}
+/* Убираем внешние границы */
+.block:nth-child(1),
+.block:nth-child(2),
+.block:nth-child(3) {
+  border-top: none;
+}
+
+.block:nth-child(1),
+.block:nth-child(4),
+.block:nth-child(7) {
+  border-left: none;
+}
+
+.block:nth-child(3),
+.block:nth-child(6),
+.block:nth-child(9) {
+  border-right: none;
+}
+
+.block:nth-child(7),
+.block:nth-child(8),
+.block:nth-child(9) {
+  border-bottom: none;
+}
+#restart{
+    width: 15vh;
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid purple;
+    border-radius: 15px;
+    background-color: beige;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+#restart:hover{
+    box-shadow: 0 15px 6px rgba(109, 45, 110, 0.281);
+    background-color: purple;
+    color: whitesmoke;
+}
